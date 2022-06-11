@@ -1,0 +1,38 @@
+<header>
+    <div class="navbar-container">
+            <nav ngxNavbarDynamicExpand class="navbar-light">
+                <a class="navbar-brand" href="#"><img src="assets/image/logo.png" width="150"/></a>
+            
+                    <button class="navbar-toggler" type="button" (click)="collapse.toggle()" aria-controls="main-nav" aria-expanded="false" aria-label="Navigáció kapcsoló">
+                        <span class="navbar-toggler-icon d-flex align-items-center justify-content-center"></span>
+                    </button>
+
+                    <div class="container">
+                        <small>Phone: 123-123-1234<br>Email: qwerty@gmail.com</small>
+                    </div>
+                    
+
+                <ngx-navbar-collapse class="navbar-collapse" id="main-nav" #collapse="ngxNavbarCollapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" routerLink="/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/project">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/display">Temp</a>
+                        </li>
+                    </ul>
+                </ngx-navbar-collapse>
+                </nav>
+    </div>
+</header>

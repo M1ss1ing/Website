@@ -1,0 +1,12 @@
+footer{
+    padding-top: 10px;
+    padding: 3em 0;
+}
+footer .menu a{
+    color: darkgrey;
+    margin: 0 10px;
+    text-transform: capitalize;
+}
+footer .signature{
+    color: darkslategray;
+}

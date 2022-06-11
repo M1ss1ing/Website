@@ -1,0 +1,33 @@
+<section class="text-primary">
+    <div class="body">
+        <div class="container">
+            <h1 class="title">Contact Us!</h1>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <!-- CONTACT FORM -->
+        <form [formGroup]="contactForm" (ngSubmit)="OnSubmit()">
+            <!-- name -->
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputName" formControlName="name" required>
+                <div class="text-danger" *ngIf="contactFormControl['name'].errors && contactFormControl['name'].touched">This field is required!</div>
+            </div>
+            <!-- email -->
+            <div class="mb-3">
+                <label for="inputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control " id="exampleInputEmail1" formControlName="email" required>
+                <div class="text-danger" *ngIf="contactFormControl['email'].errors && contactFormControl['email'].touched">This field is required!</div>
+            </div>
+            <!-- message -->
+            <div class="mb-3">
+                <label for="inputMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="inputMessage" formControlName="message" placeholder="Type your message here..."></textarea>
+            </div>
+            <!-- submit button -->
+            <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+        </form>
+    </div>
+</section>

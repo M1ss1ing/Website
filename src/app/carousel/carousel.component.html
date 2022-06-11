@@ -1,0 +1,28 @@
+<p>carousel works!</p>
+<p>works!</p>
+<section>
+    <div class="container-fluid">
+        <ngb-carousel *ngIf="images">
+            <ng-template ngbSlide>
+                <div class="wrapper">
+                    <img src="assets/image/invention_1.png" alt="first slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="wrapper">
+                    <img src={{images[1]}} alt="second slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="wrapper">
+                    <img src={{images[2]}} alt="third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="wrapper">
+                    <img src={{images[3]}} alt="fourth slide">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</section>
